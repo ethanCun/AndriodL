@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LayoutWeightActivity">
+
+<!--    layout_weight相当于flex布局中的flex -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_weight="1"
+        android:hint="请输入"
+        />
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/send"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="send"-->
+<!--        />-->
+
+<!--    只设置EditText的layout_weight button设置为wrap_content
+        会让EditText占满 button按照自己的内容显示 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send"
+        android:text="send"
+        />
+
+</LinearLayout>

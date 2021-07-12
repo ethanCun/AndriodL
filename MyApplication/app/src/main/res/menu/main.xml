@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/add_item"
+        android:title="Add"></item>
+    <item android:id="@+id/remove_item"
+        android:title="Remove"></item>
+    <item android:id="@+id/mainActivity4"
+        android:title="mainActivity4"></item>
+    <item android:id="@+id/inshiTomainActivity4"
+        android:title="隐式跳转"></item>
+    <item android:id="@+id/web"
+        android:title="浏览器或者拨打电话" />
+    <item android:id="@+id/activity5"
+        android:title="没啥用"/>
+    <item android:id="@+id/activity6"
+        android:title="向下个界面传递数据" />
+    <item android:id="@+id/activity7"
+        android:title="activity生命周期"/>
+
+</menu>

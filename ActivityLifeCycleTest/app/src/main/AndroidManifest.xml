@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.activitylifecycletest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".FourthActivity" ></activity>
+        <activity android:name=".ThirdActivity"  /> <!-- 指定activity主题 安卓系统内有很多内置主题可以选择 -->
+        <activity
+            android:name=".DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".NormalActivity"
+            android:launchMode="singleInstance" /> <!-- 通过launchMode设置启动方式 4中包括：standard singleTop singleTask singleInstance -->
+        <!-- singleInstance将activity单独放在一个返回栈中 用来在多个应用程序之间共享activity -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

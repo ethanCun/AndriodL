@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">layout布局</string>
+    <string name="title_activity_layout_weight">LayoutWeightActivity</string>
+</resources>

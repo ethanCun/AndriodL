@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayoutActivity2">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn41"
+        android:text="btn31"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn42"
+        android:text="btn32"
+        android:textAllCaps="false"
+        android:layout_toLeftOf="@+id/btn41"
+        android:layout_above="@+id/btn41"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn33"
+        android:text="btn43"
+        android:textAllCaps="false"
+        android:layout_above="@+id/btn41"
+        android:layout_toRightOf="@+id/btn41"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn34"
+        android:text="btn44"
+        android:textAllCaps="false"
+        android:layout_below="@+id/btn41"
+        android:layout_toLeftOf="@+id/btn41"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn45"
+        android:text="btn35"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btn41"
+        android:layout_below="@+id/btn41"
+        />
+
+
+</RelativeLayout>
