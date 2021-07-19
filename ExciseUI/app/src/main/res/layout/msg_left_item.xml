@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="10dp">
+
+<!-- gravity 设置在layout或者viewgroup上面 相当于让内部控件居中 -->
+<!--    layout_gravity 设置自身相对于父级的对齐方式 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img11"
+        android:gravity="center"
+        android:layout_gravity="left"
+        >
+
+<!--wrap_cxontent 时设置 gravity 没有效果， 因为宽高没有确定 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#ff0"
+            android:id="@+id/leftView"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -14,18 +14,40 @@ import com.example.recyclerview.entity.Fruit;
 
 import java.util.List;
 
-
-//自定义的Adapter继承与RecycleView的Adapter
+//自定义继承于androidx.recyclerview.widget.RecyclerView的adapter
 public class FruitAdapter extends RecyclerView.Adapter {
 
+    //填充数据
     private List<Fruit> fruits;
 
-    //构造方法， 用来接受外部传入的数据列表
     public FruitAdapter(List<Fruit> fruits){
         this.fruits = fruits;
     }
 
-    //用于创建ViewHolder
+    //缓存池
+    private class ViewHolder extends RecyclerView.ViewHolder{
+
+        //内部控件
+        private ImageView img;
+        private TextView tv;
+
+        public ImageView getImg() {
+            return img;
+        }
+
+        public TextView getTv() {
+            return tv;
+        }
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            this.img = itemView.findViewById(R.id.imgv);
+            this.tv = itemView.findViewById(R.id.tv);
+        }
+    }
+
+    //构建ViewHolder
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,44 +56,20 @@ public class FruitAdapter extends RecyclerView.Adapter {
         return new ViewHolder(view);
     }
 
-    //用户赋值, 在每个子项滚动到屏幕内的时候执行
+    //赋值
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         Fruit fruit = this.fruits.get(position);
 
         FruitAdapter.ViewHolder viewHolder = (FruitAdapter.ViewHolder)holder;
-        viewHolder.imgv.setImageResource(R.drawable.ic_launcher_background);
-        viewHolder.tv.setText(fruit.getName());
+        viewHolder.getImg().setImageResource(R.drawable.ic_launcher_background);
+        viewHolder.getTv().setText(fruit.getName());
     }
 
     @Override
     public int getItemCount() {
+
         return this.fruits.size();
     }
-
-    //定义一个内部类
-    private class ViewHolder extends RecyclerView.ViewHolder{
-
-        public ImageView imgv;
-        public TextView tv;
-
-        public ImageView getImgv() {
-            return imgv;
-        }
-
-        public TextView getTv() {
-            return tv;
-        }
-
-        //这个itemView相当于iOS的cell
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            this.imgv = (ImageView) itemView.findViewById(R.id.imgv);
-            this.tv = (TextView)itemView.findViewById(R.id.tv);
-        }
-    }
-
-
 }

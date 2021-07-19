@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FileSaveActivity">
+
+    <EditText
+        android:id="@+id/inputT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入文本"
+        />
+
+    <Button
+        android:id="@+id/fileSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存数据到文件中"
+        />
+
+    <Button
+        android:id="@+id/readFileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从文件中读取数据"
+        />
+
+</LinearLayout>
