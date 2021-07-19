@@ -1,4 +1,4 @@
-package com.example.storageinandriod;
+package com.example.storageinandriod.file;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.storageinandriod.R;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

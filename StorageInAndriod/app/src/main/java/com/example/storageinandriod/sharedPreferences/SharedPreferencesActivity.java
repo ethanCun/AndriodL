@@ -1,4 +1,4 @@
-package com.example.storageinandriod;
+package com.example.storageinandriod.sharedPreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.storageinandriod.R;
 import com.example.storageinandriod.entity.Czy;
 
 //演示安卓将数据保存到SharedPreferences

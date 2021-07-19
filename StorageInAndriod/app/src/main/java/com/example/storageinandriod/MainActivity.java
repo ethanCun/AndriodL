@@ -2,22 +2,15 @@ package com.example.storageinandriod;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import com.example.storageinandriod.file.FileSaveActivity;
+import com.example.storageinandriod.sharedPreferences.SharedPreferencesActivity;
+import com.example.storageinandriod.sqlite.SqliteActivity;
+import com.example.storageinandriod.sqlite.SqliteTransactionActivity;
 
 //测试Android通过文件保存数据， 通过DeviceFileExplorer查询数据保存位置
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button fileSave = (Button)this.findViewById(R.id.file);
         Button sharedPreferences = (Button)this.findViewById(R.id.sharedPreferences);
+        Button sqlite = (Button)this.findViewById(R.id.sqlite);
+        final Button sqliteTransaction = (Button)this.findViewById(R.id.sqliteTransactionGo);
 
         fileSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +38,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), SharedPreferencesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sqlite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), SqliteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sqliteTransaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), SqliteTransactionActivity.class);
                 startActivity(intent);
             }
         });
